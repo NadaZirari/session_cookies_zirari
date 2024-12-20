@@ -21,12 +21,12 @@
       
       session_start();
       if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $con=new mysqli('localhost','root','','SessinCookies');
+      $con=new mysqli('localhost','root','','cookies_session');
 
       $_nomUser=$_POST['nom'];
       $_Password=$_POST['password'];
     
-      $sql=$con->prepare("SELECT * FROM SesCoo");
+      $sql=$con->prepare("SELECT * FROM SC");
       $sql->execute();
   
       $result=$sql->get_result();
